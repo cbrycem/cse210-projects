@@ -7,7 +7,7 @@ class Entries
     }
     public string _prompt;
     public string _entry;
-    public string _date;
+    public DateTime _date;
 
     public void Display() {
 
