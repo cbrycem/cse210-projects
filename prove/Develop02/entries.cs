@@ -12,6 +12,7 @@ class Entries
     public void Display() {
 
         Console.WriteLine($"{_date}: {_prompt}: {_entry}");
+        Console.WriteLine("");
         
     }
 }

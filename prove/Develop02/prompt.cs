@@ -4,7 +4,14 @@ static class Prompts
 {
     public static List<string> _prompt = new List<string>{
         "How did your day go?",
-        ""
+        "What did you do today?",
+        "What did you eat today?",
+        "What did you learn in the scriptures today?",
+        "Who was the most interesting person I interacted with today?",
+        "What was the best part of my day?",
+        "How did I see the hand of the Lord in my life today?",
+        "What was the strongest emotion I felt today?",
+        "If I had one thing I could do over today, what would it be?"
     };
 
     public static void AddNew() {
