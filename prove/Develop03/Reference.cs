@@ -24,9 +24,9 @@ class Reference
 
     public void Display() {
         if (_endverse.HasValue) {
-            Console.WriteLine($"{_book} {_chapter}:{_verse}-{_endverse}"); // Range format
+            Console.Write($"{_book} {_chapter}:{_verse}-{_endverse}"); // Range format
         } else {
-            Console.WriteLine($"{_book} {_chapter}:{_verse}"); // Single verse format
+            Console.Write($"{_book} {_chapter}:{_verse}"); // Single verse format
         }
     }
 }
