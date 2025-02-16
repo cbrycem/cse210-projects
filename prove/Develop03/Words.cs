@@ -24,4 +24,7 @@ class Words
     public void Show() {
         _hidden = false;
     }
+    public override string ToString() {
+        return _word; // Ensures correct output
+    }
 }

@@ -13,6 +13,7 @@ class Scripture
     }
     private List<Words> _words = new List<Words>();
     private Reference _reference;
+    private Random rnd = new Random();
 
     private void HideWords() {
         List<int> _length = new List<int>();
@@ -24,13 +25,14 @@ class Scripture
             }
             i++;
         }
-        Random rnd = new Random();
 
-        int hideCount = Math.Min(3, _length.Count);
-        for (int l = 0; l < hideCount; l++) {
-            int blank = rnd.Next(_length.Count);
-            _words[_length[blank]].Hide();
-            _length.RemoveAt(blank);
+        if (_length.Count > 0) {
+            int hideCount = Math.Min(3, _length.Count);
+            for (int l = 0; l < hideCount; l++) {
+                int blank = rnd.Next(_length.Count);
+                _words[_length[blank]].Hide();
+                _length.RemoveAt(blank);
+            }
         }
     }
     private void ShowWords() {
@@ -43,13 +45,14 @@ class Scripture
             }
             i++;
         }
-        Random rnd = new Random();
 
-        int showCount = Math.Min(3, _length.Count);
-        for (int l = 0; l < showCount; l++) {
-            int blank = rnd.Next(_length.Count);
-            _words[_length[blank]].Show();
-            _length.RemoveAt(blank);
+        if (_length.Count > 0) {
+            int showCount = Math.Min(3, _length.Count);
+            for (int l = 0; l < showCount; l++) {
+                int blank = rnd.Next(_length.Count);
+                _words[_length[blank]].Show();
+                _length.RemoveAt(blank);
+            }
         }
     }
     private void SplitString(string reference) {
@@ -86,14 +89,15 @@ class Scripture
 
 
     }
-    public void DisplayReference() {
-        _reference.Display();
+    public string DisplayReference() {
+        string _fullref = _reference.Display();
+        return _fullref;
     }
     public void Display() {
         while(true) {
             Console.Clear();
-            _reference.Display();
-            Console.Write(": ");
+            string _fullref = _reference.Display();
+            Console.Write(_fullref + ": ");
             foreach (Words j in _words) {
                 j.Display();
             }
@@ -130,5 +134,11 @@ class Scripture
                 HideWords();
             }
         }
+    }
+
+    public string Save() {
+
+        return string.Join(" ", _words.Select(w => w.ToString()));
+
     }
 }

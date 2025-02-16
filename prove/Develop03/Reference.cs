@@ -22,11 +22,11 @@ class Reference
     private int? _endverse;
     private string _book;
 
-    public void Display() {
+    public string Display() {
         if (_endverse.HasValue) {
-            Console.Write($"{_book} {_chapter}:{_verse}-{_endverse}"); // Range format
+            return $"{_book} {_chapter}:{_verse}-{_endverse}"; // Range format
         } else {
-            Console.Write($"{_book} {_chapter}:{_verse}"); // Single verse format
+            return $"{_book} {_chapter}:{_verse}"; // Single verse format
         }
     }
 }
