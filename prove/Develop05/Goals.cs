@@ -54,12 +54,6 @@ class Goals
     public virtual void RecordEvent(ref int points) {
 
     }
-    public void SaveToFile(string fileName) {
-
-    }
-    public void LoadFromFile(string fileName) {
-
-    }
     public virtual void Display() {
         if (_complete) {
             Console.WriteLine($"[x] {_name}: {_description}");

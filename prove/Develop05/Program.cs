@@ -1,5 +1,9 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+//I completed the assignment requirements, and added into it 
+//the ability to save your goals and points then load them later
+//to pick up where you left off at
+
 
 class Program
 {
