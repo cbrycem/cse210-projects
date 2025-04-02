@@ -55,8 +55,12 @@ class Food
     public void DisplayData() {
 
     }
-    public void DisplayName() {
-
+    public void DisplayNutrientInfo()
+    {
+        foreach (Nutrition nutrient in _nutritients)
+        {
+            nutrient.DisplayInfo();  // Calling the DisplayInfo method from Nutrition object
+        }
     }
     public virtual void AddToShopping() {
 

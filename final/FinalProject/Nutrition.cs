@@ -40,6 +40,9 @@ class Nutrition
     public void UpdateNutrients() {
 
     }
+    public void DisplayInfo() {
+        Console.WriteLine($"{_name} - {_amount} {_units} - Daily Percentage: {_percentage}%");
+    }
 
 
 }

@@ -24,8 +24,22 @@ class Made_Food : Food
     public List<string> IngUnits() {
         return _ingunits;
     }
+    public void AddIngredient(Food ingredient, int amount, string unit)
+    {
+        _ingredients.Add(ingredient);
+        _amounts.Add(amount);
+        _ingunits.Add(unit);
+    }
     public void DisplayIngredients() {
 
+        for (int i = 0; i < _ingredients.Count; i++) {
+            
+            Food ingredient = _ingredients[i];
+            int amount = _amounts[i];
+            string unit = _ingunits[i];
+
+            Console.WriteLine($"Ingredient: {ingredient.Name}, Amount: {amount} {unit}");
+        }
     }
 
 
