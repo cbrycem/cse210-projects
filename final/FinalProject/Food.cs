@@ -46,15 +46,6 @@ class Food
         get { return _nutritients; }
         set { _nutritients = value; }
     }
-    public virtual void InfoGather() {
-
-    }
-    public void AddToSchedule() {
-
-    }
-    public void DisplayData() {
-
-    }
     public void DisplayNutrientInfo()
     {
         foreach (Nutrition nutrient in _nutritients)

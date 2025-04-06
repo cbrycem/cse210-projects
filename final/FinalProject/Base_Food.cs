@@ -11,9 +11,6 @@ class Base_Food : Food
     public override string Type() {
         return "Base_Food";
     }
-    public override void InfoGather() {
-
-    }
     public override void AddToShopping() {
 
     }

@@ -12,9 +12,6 @@ class Baking : Food
     public override string Type() {
         return "Baking";
     }
-    public override void InfoGather() {
-
-    }
     public override void AddToShopping() {
 
     }

@@ -1,0 +1,57 @@
+Food Name,Name,Amount,Units,Percentage
+PB2 Peanut Butter Powder,Calories,60,cal,0
+PB2 Peanut Butter Powder,Total Fat,1.5,g,2
+PB2 Peanut Butter Powder,Sodium,90,g,4
+PB2 Peanut Butter Powder,Total Carbs,5,g,2
+PB2 Peanut Butter Powder,Dietary Fiber,1,g,4
+PB2 Peanut Butter Powder,Total Sugars,2,g,0
+PB2 Peanut Butter Powder,Added Sugars,1,g,2
+PB2 Peanut Butter Powder,Protein,6,g,12
+PB2 Peanut Butter Powder,Calcium,10,g,0
+PB2 Peanut Butter Powder,Iron,0.4,g,2
+PB2 Peanut Butter Powder,Potassium,150,g,4
+Ramen,Calories,185,cal,0
+Ramen,Total Fat,7,g,9
+Ramen,Saturated Fat,3.5,g,18
+Ramen,Sodium,760,g,33
+Ramen,Total Carbs,27,g,10
+Ramen,Dietary Fiber,1,g,4
+Ramen,Total Sugars,1,g,0
+Ramen,Added Sugars,0.5,g,8
+Ramen,Iron,1.3,g,8
+Tortillas,Calories,150,cal,0
+Tortillas,Total Fat,4.5,g,6
+Tortillas,Saturated Fat,2,g,10
+Tortillas,Sodium,340,g,15
+Tortillas,Total Carbs,23,g,8
+Tortillas,Dietary Fiber,1,g,4
+Tortillas,Total Sugars,1,g,0
+Tortillas,Added Sugars,0,g,0
+Tortillas,Protein,3,g,6
+Tortillas,Calcium,100,g,8
+Tortillas,Iron,0.4,g,2
+Tortillas,Potassium,30,g,0
+Sharp Cheddar Cheese,Calories,110,cal,0
+Sharp Cheddar Cheese,Total Fat,9,g,12
+Sharp Cheddar Cheese,Saturated Fat,5,g,25
+Sharp Cheddar Cheese,Cholesterol,25,g,8
+Sharp Cheddar Cheese,Sodium,180,g,8
+Sharp Cheddar Cheese,Total Carbs,2,g,1
+Sharp Cheddar Cheese,Protein,6,g,12
+Sharp Cheddar Cheese,Vit D,0.2,g,0
+Sharp Cheddar Cheese,Calcium,190,g,15
+Sharp Cheddar Cheese,Potassium,20,g,0
+Quesadillas,Calories,260,cal,0
+Quesadillas,Total Fat,13.5,g,18
+Quesadillas,Saturated Fat,7,g,35
+Quesadillas,Cholesterol,25,g,8
+Quesadillas,Sodium,520,g,31
+Quesadillas,Total Carbs,25,g,9
+Quesadillas,Protein,9,g,18
+Quesadillas,Vit D,0.2,g,0
+Quesadillas,Calcium,290,g,23
+Quesadillas,Potassium,50,g,0
+Quesadillas,Dietary Fiber,1,g,4
+Quesadillas,Total Sugars,1,g,0
+Quesadillas,Added Sugars,0,g,0
+Quesadillas,Iron,0.4,g,2

@@ -1,0 +1,6 @@
+Food Type,Name,Brand,Food Group,Stock,Units
+Baking,PB2 Peanut Butter Powder,PB2,Protein,4,cups
+Base_Food,Ramen,Maruchen,Grain,1,Block
+Base_Food,Tortillas,Great Value,Grain,10,Tortillas
+Base_Food,Sharp Cheddar Cheese,Great Value,Dairy,4,cups
+Made_Food,Quesadillas,,,0,

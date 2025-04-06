@@ -66,19 +66,50 @@ class Schedule
         }
     }
     public void DisplaySummary() {
+        Dictionary<string, Nutrition> nutrientMap = new Dictionary<string, Nutrition>();
 
+        foreach (var meal in meals["Breakfast"].Concat(meals["Lunch"]).Concat(meals["Dinner"]).Concat(meals["Other"]))
+        {
+            Food food = meal.Key;
+            double amountMultiplier = meal.Value;
+
+            foreach (var nutrient in food.Nutrients)
+            {
+                string key = nutrient.Name;
+                double scaledAmount = nutrient.Amount * amountMultiplier;
+                double scaledPercentage = nutrient.Percentage * amountMultiplier;
+
+                if (nutrientMap.ContainsKey(key))
+                {
+                    nutrientMap[key].Amount += scaledAmount;
+                    nutrientMap[key].Percentage += scaledPercentage;
+                }
+                else
+                {
+                    nutrientMap[key] = new Nutrition(key, scaledAmount, nutrient.Units, scaledPercentage);
+                }
+            }
+        }
+
+        Console.WriteLine("=== Day Nutrition Summary ===");
+        foreach (var nutrient in nutrientMap.Values)
+        {
+            nutrient.DisplayInfo();
+        }
     }
+
     public void AddToSchedule(string meal, Food food, int amount)
     {
-        if (meals.ContainsKey(meal))
+        var mealKey = meals.Keys.FirstOrDefault(k => k.Equals(meal, StringComparison.OrdinalIgnoreCase));
+        if (!string.IsNullOrEmpty(mealKey))
         {
-            if (meals[meal].ContainsKey(food))
+            if (meals[mealKey].ContainsKey(food))
             {
-                meals[meal][food] += amount;
+                meals[mealKey][food] += amount;
             }
             else
             {
-                meals[meal].Add(food, amount);
+                meals[mealKey].Add(food, amount);
             }
 
             Console.WriteLine($"{food.Name} x{amount} has been added to {meal} for {_day}.");
@@ -87,6 +118,16 @@ class Schedule
         {
             Console.WriteLine("Invalid meal type. Please use 'Breakfast', 'Lunch', 'Dinner', or 'Other'.");
         }
+    }
+
+    public void ClearSchedule()
+    {
+        // Clear all meals
+        foreach (var mealCategory in meals.Values)
+        {
+            mealCategory.Clear();
+        }
+        Console.WriteLine($"{_day} schedule has been cleared.");
     }
 
 
